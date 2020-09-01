@@ -1,10 +1,10 @@
 h1 {
     border: 5px solid blue;
-    font-family: monospace;
+    font: monospace;
     font-size: 50px;
 }
 h2{
     border: 5px solid red;
-    font-family: monospace;
+    font: monospace;
     font-size: 50px;
 }
