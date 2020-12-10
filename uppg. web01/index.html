@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Uppgift Javascript
+  </title>
+
+</head>
+
+<body>
+  <h2>Uppgift Javascript</h2>
+  
+  <p>Todays date:</p>
+  <p id="date"></p>
+  <script>
+    var today = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = today;
+  </script>
+
+  <p>If you press F12 you can see the size of your browser window in the console</p>
+  <script>
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+    console.log("The size of your browser window is " + width + "x" + height);
+  </script>
+  
+
+  <p>Tryck på knappen för en randomiserad siffra mellan 1 till 10:
+  </p>
+
+  <button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,10)">Click Me</button>
+
+  <p id="demo"></p>
+
+  <script>
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+
+  <p>Greeting</p>
+  <button onclick="Namn()">Name</button>
+  <p id="Namn"></p>
+  <script src="script2.js"></script>
+  <br>
+
+
+  <p>Jumping Shy guy</p>
+  <button onclick="document.getElementById('myImage').src='download (2).jpg'">Jump</button>
+
+  <img id="myImage" src="fbe1bfe64753ba9a96afef8fc97a605e.jpg" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='fbe1bfe64753ba9a96afef8fc97a605e.jpg'">Stand and
+    Wave</button>
+
+  <h1 id="appNameLabel"></h1>
+  <script>
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Chrome") != -1){
+      document.getElementById("appNameLabel").innerHTML = "You are using Chrome";
+    }
+    else{
+      document.getElementById("appNameLabel").innerHTML = "You are NOT using Chrome";
+    }
+  </script>
+  
+
+
+</body>
+
+</html>
